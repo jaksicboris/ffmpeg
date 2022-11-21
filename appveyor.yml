@@ -27,7 +27,7 @@ version: 1.0.{build}
 build_cloud: electron-16-core
 image: Visual Studio 2022
 environment:
-  GIT_CACHE_PATH: z:\vs\electron\libcc_cache
+  GIT_CACHE_PATH: \\vmware-host\Shared Folders\VS\electron\libcc_cache
   ELECTRON_OUT_DIR: Default
   ELECTRON_ENABLE_STACK_DUMPING: 1
   ELECTRON_ALSO_LOG_TO_STDERR: 1
@@ -46,7 +46,7 @@ environment:
   - job_name: Test
     job_depends_on: Build
 
-clone_folder: z:\vs\projects\src\electron
+clone_folder: \\vmware-host\Shared Folders\VS\projects\src\electron
 
 # the first failed job cancels other jobs and fails entire build
 matrix:
