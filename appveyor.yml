@@ -27,7 +27,7 @@ version: 1.0.{build}
 build_cloud: electron-16-core
 image: Visual Studio 2022
 environment:
-  GIT_CACHE_PATH: Y:\electron\libcc_cache
+  GIT_CACHE_PATH: Y:\projects\electron\libcc_cache
   ELECTRON_OUT_DIR: Default
   ELECTRON_ENABLE_STACK_DUMPING: 1
   ELECTRON_ALSO_LOG_TO_STDERR: 1
