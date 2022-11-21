@@ -42,7 +42,7 @@ environment:
   - job_name: Test
     job_depends_on: Build
 
- clone_folder: C:\projects\src\electron
+clone_folder: C:\projects\src\electron
 
 # the first failed job cancels other jobs and fails entire build
 matrix:
