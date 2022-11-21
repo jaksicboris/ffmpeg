@@ -34,6 +34,10 @@ environment:
   MOCHA_REPORTER: mocha-multi-reporters
   MOCHA_MULTI_REPORTERS: mocha-appveyor-reporter, tap
   GOMA_FALLBACK_ON_AUTH_FAILURE: true
+  GN_CONFIG: release
+  target_cpu: x64
+  NPM_CONFIG_ARCH: x64
+  TARGET_ARCH: x64
 
   matrix:
 
