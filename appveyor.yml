@@ -148,7 +148,7 @@ for:
             }
           }
         }
-    - if "%RUN_GCLIENT_SYNC%"=="true" ( gclient sync )
+    #- if "%RUN_GCLIENT_SYNC%"=="true" ( gclient sync )
     - ps: >-
         if ($env:SAVE_GCLIENT_SRC -eq 'true') {
           # archive current source for future use 
