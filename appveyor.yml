@@ -83,7 +83,7 @@ for:
           $env:RAW_GOMA_AUTH | Set-Content $env:GOMA_OAUTH2_CONFIG_FILE
         }
     - git clone https://github.com/electron/build-tools.git
-    - cd build-tools
+    - cd buildtools
     - npm install
     - mkdir third_party
     - ps: >-
