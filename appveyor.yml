@@ -95,7 +95,7 @@ for:
       #- git clone https://github.com/electron/build-tools.git
       - cd build-tools
       #- npm install
-      - mkdir third_party
+      #- mkdir third_party
       - ps: >-
           node -e "require('./src/utils/goma.js').downloadAndPrepare({ gomaOneForAll: true })"
       - ps: $env:GN_GOMA_FILE = node -e "console.log(require('./src/utils/goma.js').gnFilePath)"
