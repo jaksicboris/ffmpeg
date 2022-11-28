@@ -24,7 +24,7 @@
 # https://www.appveyor.com/docs/build-configuration/#custom-environment-variables
 
 version: 1.0.{build}
-build_cloud: BROOXDCA2
+build_cloud: HWC-HWP-6512890
 image: Visual Studio 2019
 environment:
   GIT_CACHE_PATH: c:\projects\libcc_cache
