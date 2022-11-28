@@ -73,16 +73,16 @@ for:
       - cd ..
       - ps: Write-Host "Building $env:GN_CONFIG build"
       - git config --global core.longpaths true
-      - ps: >-
-          if (Test-Path -Path "$pwd\depot_tools") {
-            Remove-Item -Recurse -Force $pwd\depot_tools
-          }
-      - ps: >-
-          if (Test-Path -Path "$pwd\build-tools") {
-            Remove-Item -Recurse -Force $pwd\build-tools
-          }
-      - ps: git clone --depth=1 https://chromium.googlesource.com/chromium/tools/depot_tools.git
-      - ps: $env:PATH="$pwd\depot_tools;$env:PATH"
+      #- ps: >-
+      #    if (Test-Path -Path "$pwd\depot_tools") {
+      #      Remove-Item -Recurse -Force $pwd\depot_tools
+      #    }
+      #- ps: >-
+      #    if (Test-Path -Path "$pwd\build-tools") {
+      #      Remove-Item -Recurse -Force $pwd\build-tools
+      #    }
+      #- ps: git clone --depth=1 https://chromium.googlesource.com/chromium/tools/depot_tools.git
+      #- ps: $env:PATH="$pwd\depot_tools;$env:PATH"
       - ps: >-
           if (Test-Path -Path "$pwd\src\electron") {
             Remove-Item -Recurse -Force $pwd\src\electron
@@ -92,9 +92,9 @@ for:
             $env:GOMA_OAUTH2_CONFIG_FILE = "$pwd\.goma_oauth2_config"
             $env:RAW_GOMA_AUTH | Set-Content $env:GOMA_OAUTH2_CONFIG_FILE
           }
-      - git clone https://github.com/electron/build-tools.git
+      #- git clone https://github.com/electron/build-tools.git
       - cd build-tools
-      - npm install
+      #- npm install
       - mkdir third_party
       - ps: >-
           node -e "require('./src/utils/goma.js').downloadAndPrepare({ gomaOneForAll: true })"
